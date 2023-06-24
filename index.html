@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Abhay - Portfolio</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(22, 22, 99);
+            color: #fff;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 70px;
+            background-color: rgb(27, 27, 143);
+        }
+
+        nav ul{
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav ul li a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+
+        nav ul li a:hover{
+            color: rgb(130, 130, 214);
+        }
+        nav ul li{
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        .left{
+            font-size: 1.5rem;
+            /* border: 2px solid black; */
+            width: 20%;
+        }
+
+        .firstSection{
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+        }
+
+        .firstSection > div{
+            width: 33%;
+        }
+
+        .leftSection{
+            /* background-color: red; */
+            margin: 70px 0;
+            font-size: 3rem;
+            height: 40vh;
+        }
+        .righttSection{
+            /* background-color: red; */
+        }
+
+        .righttSection img{
+            width: 100%;
+            margin: 50px 0;
+            border-radius: 7px;
+        }
+
+        .leftSection .text{
+            font-weight: bold;
+            color: rgb(130, 130, 214);
+        }
+
+        #element{
+            color: rgb(130, 130, 214);
+        }
+
+        .secondSection{
+            /* background-color: red; */
+            width: 83%;
+            margin: 110px auto 70px auto;
+        }
+
+        .secondSection h1{
+            font-size: 2rem;
+            margin: 60px 0;
+        }
+
+        .secondSection .skills{
+            width: 100%;
+            display: grid;
+            place-items: center;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            /* background-color: rosybrown; */
+            /* border: 2px solid  rgb(130, 130, 214); */
+            height: 40%;
+        }
+
+        .secondSection .skills .s1{
+            /* background-color: red; */
+            width: 220px;
+            height: 220px;
+            /* border: 25px solid rgb(212, 126, 14); */
+            border: 3px solid #067857;
+            border-radius: 50%;
+            background-color: rgb(71, 50, 168);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            animation: rotate 4s linear infinite;         
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        .secondSection .skills .center{
+            text-align: center;
+        }
+
+        hr{
+            width: 83%;
+            margin: 100px auto;
+        }
+
+        .thirdSection{
+            width: 83%;
+            margin: 110px auto 70px auto;
+            /* border: 3px solid black; */
+        }
+
+        .thirdSection h1{
+            font-size: 2rem;
+            margin: 60px 0;
+        }
+
+        .thirdSection .education{
+            display: grid;
+            place-items: center;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            width: 70%;
+            /* border: 3px solid black; */
+            margin: auto;
+
+        }
+        .thirdSection .education .masters{
+            width: 250px;
+            height: 250px;
+            border: 2px solid #067857;
+            padding: 30px 0 0 0;
+            background-color: rgb(71, 50, 168);
+        }
+
+        .thirdSection .education .masters p{
+            font-size: 25px;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        #mca{
+            color: #fff;
+        }
+
+        .fourthSection{
+            width: 83%;
+            margin: 110px auto 70px auto;
+            /* border: 3px solid black; */
+        }
+
+        .fourthSection h1{
+            font-size: 2rem;
+            margin: 60px 0;
+        }
+
+        .fourthSection li{
+            font-size: 20px;
+            line-height: 40px;
+        }
+
+        .fourthSection .profileLink{
+            margin-top: 50px;
+            display: flex;
+            /* border: 2px solid black; */
+            justify-content:space-evenly;
+        }
+        .fourthSection .profileLink p{
+            font-size: 20px;
+            line-height: 40px;
+        }
+
+        .fourthSection .profileLink p a{
+            text-decoration: none;
+            color: #067857;
+            font-weight: bold;
+
+        }
+
+        .fourthSection .profileLink p a:hover{
+            text-decoration: underline;
+        }
+        
+        .fifthSection{
+            width: 83%;
+            margin: 80px auto 70px auto;
+            /* border: 2px solid black; */
+        }
+
+        .fifthSection h1{
+            font-size: 2rem;
+            margin: 60px 0;
+        }
+
+        .fifthSection p{
+            font-size: 20px;
+            line-height: 40px;
+        }
+
+        .fifthSection a button{
+            margin: 20px 0;
+            width: 7vw;
+            height: 4vh;
+            font-size: 17px;
+        }
+
+        .fifthSection a button:hover{
+            background-color: rgb(71, 50, 168);
+            color: #fff;
+            border: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left"><span id="abhay"></span></div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <!-- <li><a href="#">Sevices</a></li> -->
+                    <!-- <li><a href="#">Projects</a></li> -->
+                    <li><a href="contactMe.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">Hi, I am <span class="text">Abhay</span>  
+                <div>and I am a </div>
+                <span id="element"></span>
+            </div>
+            <div class="righttSection">
+                <img src="images/developer.png" alt="Loading...">
+            </div>
+        </section>
+
+        <section class="secondSection">
+            <h1>Technical Skills</h1>
+            <div class="skills">
+                <div class="s1">C</div>
+                <div class="s1">Java</div>
+                <div class="s1">DSA</div> 
+                <div class="s1">HTML</div>
+                <div class="s1">CSS</div>
+                <div class="s1">JavaScipt</div>
+                <div class="s1">SQL</div>
+                <div class="s1 center">Problem Solving</div>
+            </div>          
+        </section>
+
+        <hr>
+
+        <section class="thirdSection">
+            <h1>Education</h1>
+            <div class="education">
+                <div class="masters">
+                    <!-- <p style="font-size: 35px;">PG</p> -->
+                    <p><span id="mca"></span></p>
+                    <p>PSIT, Kanpur</p>
+                    <p>2022 - Present</p>
+                    <p>Aggregate % : ND</p>
+                </div>
+                <div class="masters">
+                    <!-- <p>UG</p> -->
+                    <p><span id="bsc"></span></p>
+                    <p>Dr. RMLAU, Ayodhya</p>
+                    <p>2019 - 2022</p>
+                    <p>Aggregate % : 76%</p>
+                </div>
+                <!-- <div class="masters">
+                    <h1>Intermediate</h1>
+                    <h1>Anil Saraswati Vidya Mandir, Ayodhya</h1>
+                    <h1>2018 - 2019</h1>
+                    <h1>Aggregate %: 68%</h1>
+                </div>
+                <div class="masters">
+                    <h1>HIghSchool</h1>
+                    <h1>PSIT, Kanpur</h1>
+                    <h1>2022 - Present</h1>
+                </div> -->
+            </div>
+        </section>
+
+        <section class="fourthSection">
+            <h1>Achievements</h1>
+            <li>5 Star Java Coder @HackerRank</li>
+            <li>5 Star Problem Solver @HackerRank</li>
+            <li>3 Star C++ Coder @HackerRank</li>
+            <li>70+ Questions Solved on LeetCode</li>
+
+            <div class="profileLink">
+                <p>HackerRank Profile Link - <a href="https://www.hackerrank.com/abhay_singh3104" target="_blank">Click Me</a></p>
+                <p>Leetcode Profile Link - <a href="https://leetcode.com/abhayempire64/" target="_blank">Click Me</a></p>
+            </div>
+        </section>
+
+        <section class="fifthSection">
+            <h1>Download Resume</h1>
+            <p>Click here to Download Abhay's Resume</p>
+            <a href="https://drive.google.com/file/d/1twpjkrlVVNDD3LLOf9GbntdUqEKLizlJ/view?usp=drive_link" target="_blank"><button>Download</button></a>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Android Developer Learner', 'Web Developer.'],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true,
+        });
+
+        var typed2 = new Typed('#mca', {
+            strings: ['MCA'],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true,
+        });
+
+        var typed3 = new Typed('#bsc', {
+            strings: ['B.Sc'],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true,
+        });
+        
+        var typed2 = new Typed('#abhay', {
+        strings: ['Abhay\'s Portfolio'],
+        typeSpeed: 50,
+        });
+    </script>
+</body>
+</html>
