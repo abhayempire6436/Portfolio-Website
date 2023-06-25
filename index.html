@@ -4,249 +4,174 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 
     <title>Abhay - Portfolio</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        body{
-            background-color: rgb(22, 22, 99);
-            color: #fff;
-            font-family: 'Roboto Slab', serif;
-        }
-
-        nav{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 70px;
-            background-color: rgb(27, 27, 143);
-        }
-
-        nav ul{
-            display: flex;
-            justify-content: center;
-        }
-        
-        nav ul li a{
-            text-decoration: none;
-            color: #fff;
-            font-size: 1.1rem;
-        }
-
-        nav ul li a:hover{
-            color: rgb(130, 130, 214);
-        }
-        nav ul li{
-            list-style: none;
-            margin: 0 23px;
-        }
-
-        .left{
-            font-size: 1.5rem;
-            /* border: 2px solid black; */
-            width: 20%;
-        }
-
-        .firstSection{
-            display: flex;
-            justify-content: space-around;
-            margin: 30px 0;
-        }
-
-        .firstSection > div{
-            width: 33%;
-        }
-
-        .leftSection{
-            /* background-color: red; */
-            margin: 70px 0;
-            font-size: 3rem;
-            height: 40vh;
-        }
-        .righttSection{
-            /* background-color: red; */
-        }
-
-        .righttSection img{
-            width: 100%;
-            margin: 50px 0;
-            border-radius: 7px;
-        }
-
-        .leftSection .text{
-            font-weight: bold;
-            color: rgb(130, 130, 214);
-        }
-
-        #element{
-            color: rgb(130, 130, 214);
-        }
-
-        .secondSection{
-            /* background-color: red; */
-            width: 83%;
-            margin: 110px auto 70px auto;
-        }
-
-        .secondSection h1{
-            font-size: 2rem;
-            margin: 60px 0;
-        }
-
-        .secondSection .skills{
-            width: 100%;
-            display: grid;
-            place-items: center;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            /* background-color: rosybrown; */
-            /* border: 2px solid  rgb(130, 130, 214); */
-            height: 40%;
-        }
-
-        .secondSection .skills .s1{
-            /* background-color: red; */
-            width: 220px;
-            height: 220px;
-            /* border: 25px solid rgb(212, 126, 14); */
-            border: 3px solid #067857;
-            border-radius: 50%;
-            background-color: rgb(71, 50, 168);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2rem;
-            animation: rotate 4s linear infinite;         
-        }
-
-        @keyframes rotate {
-            0% {
-                transform: rotate(0deg);
+        /* Media Queries */
+        @media only screen and (max-width: 720px){
+            body{
+                /* background-color: red; */
             }
-            100% {
-                transform: rotate(360deg);
+
+            .left{
+                /* border: 2px solid black; */
+                width: 100vw;
+                text-align: center;
+                /* margin: 20px auto 10px auto; */
+                margin-bottom: 0;
+            }
+            nav{
+                display: flex;
+                flex-direction: column;
+                /* justify-content: space-around; */
+                align-items: center;
+                height: 20vh;
+                background-color: rgb(27, 27, 143);
+                
+            }
+            nav .right{
+                /* border: 2px solid black; */
+                margin-top: 0;
+            }
+
+            .firstSection{
+                display: flex;
+                flex-direction: column;
+                /* justify-content: space-around; */
+                /* margin: 10px 0; */
+                /* border: 2px solid white; */
+                /* flex-direction: row; */
+                /* height: 100vh; */
+            }
+
+            .leftSection{
+                /* background-color: red; */
+                /* border: 2px solid black; */
+                /* margin: 20px 0; */
+                font-size: 2rem;
+                width: 82vw;
+                height: 55vw;
+                padding: 30px 50px 0 50px;
+            }
+            .righttSection{
+                /* background-color: red; */
+                margin-top: 10px;
+                width: 99vw;
+                padding: 0px;
+                /* border: 2px solid black; */
+            }
+            .righttSection img{
+                width: 99.5vw;
+                /* height: 100vh; */
+
+                /* margin: 30px 0; */
+                border-radius: 7px;
             }
         }
-        .secondSection .skills .center{
-            text-align: center;
+
+        @media only screen and (max-width: 815px){
+            .secondSection .skills{
+                width: 100%;
+                display: grid;
+                place-items: center;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
         }
 
-        hr{
-            width: 83%;
-            margin: 100px auto;
+        @media only screen and (max-width: 531px){
+            .secondSection .skills{
+                width: 100%;
+                display: grid;
+                place-items: center;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 30px;
+            }
         }
 
-        .thirdSection{
-            width: 83%;
-            margin: 110px auto 70px auto;
-            /* border: 3px solid black; */
+        @media only screen and (max-width: 657px){
+            .thirdSection .education{
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            .thirdSection h1{
+                text-align: center;
+            }
+
+            .thirdSection .education .masters{
+                width: 100%;
+                height: 40vh;
+                /* margin: 30px; */
+                border: 2px solid #067857;
+                padding: 30px 0 0 0;
+                background-color: rgb(71, 50, 168);
+            }
         }
 
-        .thirdSection h1{
-            font-size: 2rem;
-            margin: 60px 0;
+        @media only screen and (max-width: 815px){
+            
+
+            
+
+            .fourthSection .profileLink{
+                margin-top: 50px;
+                display: flex;
+                /* border: 2px solid black; */
+                /* justify-content:space-evenly; */
+                flex-direction: column;
+            }
+
+            .fourthSection .profileLink p{
+                /* font-size: 20px;
+                line-height: 40px; */
+                margin-left: 10px;
+                /* text-align: center; */
+            }
         }
 
-        .thirdSection .education{
-            display: grid;
-            place-items: center;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
-            width: 70%;
-            /* border: 3px solid black; */
-            margin: auto;
+        @media only screen and (max-width: 442px){
+            .fourthSection h1{
+                text-align: center;
+            }
 
-        }
-        .thirdSection .education .masters{
-            width: 250px;
-            height: 250px;
-            border: 2px solid #067857;
-            padding: 30px 0 0 0;
-            background-color: rgb(71, 50, 168);
-        }
+            .fourthSection li{
+                font-size: 20px;
+                /* text-decoration: none; */
+                list-style: none;
+                line-height: 40px;
+                margin-left: 0px;
+                text-align: center;
+            }
 
-        .thirdSection .education .masters p{
-            font-size: 25px;
-            text-align: center;
-            line-height: 50px;
-        }
+            .fifthSection h1, p{
+                text-align: center;
+            }
 
-        #mca{
-            color: #fff;
-        }
-
-        .fourthSection{
-            width: 83%;
-            margin: 110px auto 70px auto;
-            /* border: 3px solid black; */
-        }
-
-        .fourthSection h1{
-            font-size: 2rem;
-            margin: 60px 0;
-        }
-
-        .fourthSection li{
-            font-size: 20px;
-            line-height: 40px;
-        }
-
-        .fourthSection .profileLink{
-            margin-top: 50px;
-            display: flex;
-            /* border: 2px solid black; */
-            justify-content:space-evenly;
-        }
-        .fourthSection .profileLink p{
-            font-size: 20px;
-            line-height: 40px;
-        }
-
-        .fourthSection .profileLink p a{
-            text-decoration: none;
-            color: #067857;
-            font-weight: bold;
-
-        }
-
-        .fourthSection .profileLink p a:hover{
-            text-decoration: underline;
-        }
-        
-        .fifthSection{
-            width: 83%;
-            margin: 80px auto 70px auto;
-            /* border: 2px solid black; */
-        }
-
-        .fifthSection h1{
-            font-size: 2rem;
-            margin: 60px 0;
-        }
-
-        .fifthSection p{
-            font-size: 20px;
-            line-height: 40px;
-        }
-
-        .fifthSection a button{
-            margin: 20px 0;
-            width: 7vw;
-            height: 4vh;
-            font-size: 17px;
-        }
-
-        .fifthSection a button:hover{
-            background-color: rgb(71, 50, 168);
-            color: #fff;
-            border: none;
+            .fifthSection .btn{
+                /* width: 100%;
+                margin: auto; */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /* border: 2px solid black; */
+            }
+            .fifthSection .btn a{
+                /* width: 100%;
+                margin: 0 auto; */
+                /* display: block; */
+            }
+            .fifthSection a button{
+                /* margin: 20px auto; */
+                width: 100px;
+                height: 4vh;
+                font-size: 17px;
+            }
         }
         
     </style>
@@ -341,7 +266,10 @@
         <section class="fifthSection">
             <h1>Download Resume</h1>
             <p>Click here to Download Abhay's Resume</p>
-            <a href="https://drive.google.com/file/d/13ngTDIGGTStRM3VQkIDTIW-Ud_JokvM5/view?usp=sharing" target="_blank"><button>Download</button></a>
+            <div class="btn">
+                <a href="https://drive.google.com/file/d/13ngTDIGGTStRM3VQkIDTIW-Ud_JokvM5/view?usp=sharing" target="_blank"><button>Download</button></a>
+            </div>
+            
         </section>
     </main>
 
