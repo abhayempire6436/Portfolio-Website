@@ -255,5 +255,6 @@ hr{
     background-color: rgb(71, 50, 168);
     color: #fff;
     border: none;
+    border-radius: 5px;
 }
 
